@@ -82,6 +82,10 @@ a:hover {
     align-self: center;
 }
 
+.weave:hover {
+    box-shadow: 0 20px 20px rgba(255, 0, 0, 0.658);
+}
+
 
 /* I tried so, so hard to figure out negative margins but it just didn't work out
 So for now, I just threw together some custom background images. I hope that's alright :> 
