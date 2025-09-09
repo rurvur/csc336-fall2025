@@ -51,21 +51,44 @@ h2 {
 }
 
 .flex-container > div {
-    background-color: #a5a5a5;
+    background-color: #ffcfcfbf;
     margin: 5px;
     padding: 20px;
     font-size: 30px;
     text-align: center;
 }
 
+.cardcont {
+    display: flex;
+    font-family: "silkfont", sans-serif;
+    font-size: 10px;
+}
+
+.cardcont > div {
+    margin: 2px;
+    color:aquamarine;
+    text-align: center;
+}
+
 a:hover {
-  background-color: rgb(253, 98, 86);
-  font-size: 32px;
+    background-color: rgb(253, 98, 86);
+    font-size: 32px;
+}
+
+.weave {
+    border: solid;
+    border-radius: 15px;
+    border-color: rgb(252, 252, 252);
+    align-self: center;
 }
 
 
 /* I tried so, so hard to figure out negative margins but it just didn't work out
-So for now, I just threw together some custom background images. I hope that's alright :> */
+So for now, I just threw together some custom background images. I hope that's alright :> 
+Also I know they don't work well with overflow, but I almost think that adds to the experience
+of this being a crappy travel guide. Totally not an excuse, mhm yep. The images that start and
+end in black look normal though, improvements for next time I suppose!
+*/
 .bonebottom{
     background-image: url("BoneBottom.jpg");
     background-size: 200vh;
@@ -74,7 +97,7 @@ So for now, I just threw together some custom background images. I hope that's a
 .mossgrotto{
     background-image: url("MossGrotto.jpg");
     background-size: 200vh;
-    color: rgb(4, 43, 0);
+    color: rgb(135, 238, 162);
 }
 .marrow{
     background-image: url("Marrow.jpg");
@@ -89,6 +112,7 @@ So for now, I just threw together some custom background images. I hope that's a
 .huntersmarch{
     background-image: url("HuntersMarch.png");
     background-size: 200vh;
+    padding: -50px;
     color: rgb(185, 15, 3);
 }
 .farfields{
@@ -100,4 +124,23 @@ So for now, I just threw together some custom background images. I hope that's a
     background-image: url("Cursed.png");
     background-size: 220vh;
     overflow: hidden;
+}
+
+
+.card {
+    width: 700px;
+    height: 153px;
+    margin: 20px;
+    padding: 0px;
+    border: 2px solid #05f37c;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #a40000, #006d25);
+    line-height: 1.4;
+}
+
+.card:hover {
+  border-color: rgb(209, 245, 3);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
