@@ -1,0 +1,103 @@
+@font-face {
+    font-family: silkfont;
+    src: url(silkfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+    font-family: "silkfont", sans-serif;
+    overflow-y: scroll;
+}
+footer {
+    text-align: center;
+    font-family: "silkfont";
+    font-size: 15px;
+    background-color: whitesmoke;
+    color: black;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+p {
+    font-size: 20;
+}
+h1 {
+    font-size: 75;
+    text-align: center;
+}
+h2 {
+    font-size: 60;
+    text-align: center;
+}
+
+#special{
+    font-size: 40;
+    text-align: center;
+}
+#normal{
+    border: solid;
+    border-radius: 15px;
+    border-color: rgb(247, 32, 4);
+}
+
+.flex-container {
+    display: flex;
+    background-color: rgb(137, 30, 0);
+}
+
+.flex-container > div {
+    background-color: #a5a5a5;
+    margin: 5px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+a:hover {
+  background-color: rgb(253, 98, 86);
+  font-size: 32px;
+}
+
+
+/* I tried so, so hard to figure out negative margins but it just didn't work out
+So for now, I just threw together some custom background images. I hope that's alright :> */
+.bonebottom{
+    background-image: url("BoneBottom.jpg");
+    background-size: 200vh;
+    color: rgb(255, 255, 255);
+}
+.mossgrotto{
+    background-image: url("MossGrotto.jpg");
+    background-size: 200vh;
+    color: rgb(4, 43, 0);
+}
+.marrow{
+    background-image: url("Marrow.jpg");
+    background-size: 200vh;
+    color: rgb(13, 11, 3);
+}
+.deepdocks{
+    background-image: url("DeepDocks.jpg");
+    background-size: 200vh;
+    color: rgb(255, 189, 36);
+}
+.huntersmarch{
+    background-image: url("HuntersMarch.png");
+    background-size: 200vh;
+    color: rgb(185, 15, 3);
+}
+.farfields{
+    background-image: url("FarFields.jpg");
+    background-size: 200vh;
+    color: rgb(240, 121, 78);
+}
+.cursed{
+    background-image: url("Cursed.png");
+    background-size: 220vh;
+    overflow: hidden;
+}
