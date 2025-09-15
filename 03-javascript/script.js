@@ -1,1 +1,0 @@
-let navigationBar = document.getElementsByClassName("navbar");
