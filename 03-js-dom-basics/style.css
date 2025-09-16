@@ -43,7 +43,7 @@ body {
     margin: 20px;
     position: relative;
     left: 50%;
-    border: 2px solid #05f37c;
+    border: 2px solid #ff9a63;
     border-radius: 12px;
     box-sizing: border-box;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -51,7 +51,7 @@ body {
 }
 
 #upgradeButton:hover {
-    border-color: rgb(209, 245, 3);
+    border-color: rgb(255, 13, 0);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
@@ -117,4 +117,12 @@ body {
     text-align: center;
     color:rgb(80, 173, 254);
     font-size: 15px;
+}
+
+#requiredButton {
+    background-color: bisque;
+    font-size: 12px;
+    height: 40px;
+    width: 150px;
+    cursor: pointer;
 }

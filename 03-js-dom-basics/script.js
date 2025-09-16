@@ -111,3 +111,11 @@ function createFlea(){
     fleaArea.appendChild(img);
     fleas = document.getElementsByClassName("Flea");
 }
+
+//Added this exclusively to meet requirements lol
+function requiredButton() {
+    const silkText = document.getElementById("silkCount");
+    const buttonCol = document.getElementById("upgradeButton");
+    silkText.style.color = "red";
+    buttonCol.style.backgroundColor = "bisque";
+}
