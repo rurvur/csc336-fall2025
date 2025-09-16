@@ -6,13 +6,29 @@
         <script src="script.js"></script>
     </head>
     <body>
+        <audio id="awoo" src="awoo.mp3"></audio>
         <div class="weaveBlock">
             <p>Silk: </p><p id = "silkCount">0</p>
             <img class="weaveIcon" src="Weaversong.png" width = 250px onclick="clickedSilk()">
         </div>
-        <div class = "upgradeButton">
-            <img class="upgradeIcon" src="Flea.png">
-            <p class = "upgradeName">A Flea!</p>
+        <div id = "fleaCaravan">
+            <p>Welcome to the Flea Caravan!</p>
+        </div>
+        <div id = "upgradeButton" onclick="clickedNeedle()">
+            <div class = "upgradeIcon"><img src="needle.png"></div>
+            <div class = "upgradeName">Needle</div>
+            <div class = "upgradeDesc">Increases silk gain from clicks</div>
+            <div class = "upgradeDesc">
+                <p>Cost: </p><p class = "upgradeDesc" id = "needleCost"> 100</p>
+            </div>
+        </div>
+        <div id = "upgradeButton" onclick="clickedFlea()">
+            <div class = "upgradeIcon"><img src="Flea.png"></div>
+            <div class = "upgradeName">A Flea!</div>
+            <div class = "upgradeDesc">A helpful flea who gathers silk</div>
+            <div class = "upgradeDesc">
+                <p>Cost: </p><p class = "upgradeDesc" id = "fleaCost"> 15</p>
+            </div> 
         </div>
     </body>
 </html>

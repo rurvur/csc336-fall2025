@@ -8,7 +8,9 @@
 body {
     font-family: "silkfont", sans-serif;
     overflow-y: scroll;
-    background-color:rgb(255, 116, 116)
+    /*background-color:rgb(255, 116, 116)*/
+    background-image: url("finalback.jpg");
+    background-size: 100%;
 }
 
 .weaveBlock {
@@ -19,6 +21,7 @@ body {
     top: 10%;
     text-align: center;
     font-size: 25px;
+    color:rgb(249, 151, 151)
 }
 
 .weaveIcon {
@@ -33,13 +36,23 @@ body {
     box-shadow: 0px 20px 20px rgba(255, 236, 236, 0.735);
 }
 
-.upgradeButton {
-    background-color: rgb(146, 135, 117);
-    width: 25%;
-    height: 150px;
+#upgradeButton {
+    background-color: rgb(182, 163, 134);
+    width: 45%;
+    height: 200px;
     margin: 20px;
-    position: absolute;
-    right: 5%;
+    position: relative;
+    left: 50%;
+    border: 2px solid #05f37c;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+}
+
+#upgradeButton:hover {
+    border-color: rgb(209, 245, 3);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
 }
 
 .upgradeName {
@@ -49,12 +62,49 @@ body {
 
 .upgradeDesc {
     font-size: 25px;
+    display: flex;
 }
 
 .upgradeIcon {
-    height: 50px;
+    height: 200px;
+    float: left;
 }
 
 #silkCount {
     size: 25px;
+}
+
+#fleaCost {
+    size: 25px;
+    color:rgb(0, 0, 0);
+}
+
+#needleCost {
+    size: 25px;
+    color:rgb(0, 0, 0);
+}
+
+#needleLv {
+    size: 25px;
+    color:rgb(0, 0, 0);
+}
+
+.flea {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#fleaCaravan {
+    position: absolute;
+    left: 30%;
+    width: 15%;
+    height: 80%;
+    border: 2px solid rgb(253, 122, 122);
+    border-radius: 20%;
+    background-color: #e7d993;
+    text-align: center;
+    color:rgb(80, 173, 254);
+    font-size: 15px;
 }
