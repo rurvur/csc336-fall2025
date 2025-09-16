@@ -2,9 +2,13 @@ let navigationBar = document.getElementsByClassName("navbar");
 
 let silk = 0;
 let silkClick = 1;
+let silkMult = 1;
 let fleaCount = 0;
 let fleaCost = 15;
+let fleaMult = 1;
 let needleCost = 100;
+let maidenCost = 1000;
+let beastCost = 500;
 const awoo = new Audio("awoo.mp3");
 setInterval(fleaFunc, 1000);
 
@@ -13,7 +17,7 @@ function clickedOnDemoBox() {
 }
 
 function clickedSilk() {
-    silk += silkClick;
+    silk += silkClick * silkMult;
     changeCount();
 }
 
@@ -24,6 +28,16 @@ function clickedNeedle() {
         needleCost = Math.round(needleCost * 5);
         changeCount();
         updateNeedle();
+    }
+}
+
+function clickedMaiden() {
+    if (silk >= maidenCost) {
+        silkMult++;
+        silk = silk - maidenCost;
+        maidenCost = Math.round(maidenCost * 10);
+        changeCount();
+        updateMaiden();
     }
 }
 
@@ -40,12 +54,22 @@ function clickedFlea() {
     }
 }
 
+function clickedBeast() {
+    if (silk >= beastCost) {
+        fleaMult++;
+        silk = silk - beastCost;
+        beastCost = Math.round(beastCost * 3);
+        changeCount();
+        updateBeast();
+    }
+}
+
 function changeCount() {
     document.getElementById("silkCount").innerHTML = silk;
 }
 
 function fleaFunc() {
-    silk += fleaCount;
+    silk += fleaCount * fleaMult;
     changeCount();
 }
 
@@ -55,10 +79,17 @@ function updateFlea(){
 
 function updateNeedle(){
     document.getElementById("needleCost").innerHTML = needleCost;
-    document.getElementById("needleLv").innerHTML = silkClick;
 }
 
+function updateMaiden(){
+    document.getElementById("maidenCost").innerHTML = maidenCost;
+}
 
+function updateBeast(){
+    document.getElementById("beastCost").innerHTML = beastCost;
+}
+
+//This function was mostly generated, I edited it a bit though
 function createFlea(){
     const fleaArea = document.getElementById("fleaCaravan");
 
