@@ -46,6 +46,7 @@ function addNewTask(e){
     let deadlineInput = document.querySelector("#Deadline").value;
     let PriorityInput = document.querySelector("#Priority").value;
     
+    //ensures all fields have input
     if (PriorityInput != null){
         alert("Make sure all fields have inputs!");
         return
