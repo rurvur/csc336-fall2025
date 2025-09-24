@@ -1,0 +1,48 @@
+body {
+    overflow-y: scroll;
+    background-image: url("background.jpg");
+    background-size: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 5px;
+    color: rgb(255, 159, 130);
+    text-align: center;
+}
+
+p {
+    margin: 10px;
+    text-align: center;
+}
+
+label{
+    margin: 10px;
+    color: aqua;
+}
+
+.textbox {
+    background-color: rgba(1, 0, 81, 0.67);
+    width: 40%;
+    position: relative;
+    left: 30%;
+    top: 20px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+input {
+    margin: 5px;
+}
+
+#task-list {
+    font-size: 20px;
+    color:aliceblue;
+    margin: 2px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 2px;
+    color:aquamarine;
+}

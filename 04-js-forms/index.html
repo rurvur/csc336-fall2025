@@ -1,12 +1,27 @@
 <html>
     <head>
-        <title>I dunno what to call this yet</title>
+        <title>Task Manager</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
     <body>
-        <div>
-            A
+        <div class = "textbox">
+            <h1>Welcome to your new task manager!</h1>
+            <p>
+                Simply add tasks, their priority level, and their due date, and let the manager display them for you!
+            </p>
+            <form id = "task-form">
+                <label for="nameInput">Name:</label>
+                <input type = "text" id = "nameInput" name = "nameInput" placeholder = "ex. finish Assignment 4">
+                <label for="Deadline">Due:</label>
+                <input type = "text" id = "Deadline" name = "Deadline" placeholder = "ex. 9/24/2025">
+                <label for="Priority">Priority:</label>
+                <input type = "text" id = "Priority" name = "Priority" placeholder = "Between 1 and 5!">
+                <button type="submit" id="taskButton">Add New Task</button>
+                </form>
+            <h1>Your Tasks:</h1>
+            <div id = "task-list"></div>
         </div>
+
     </body>
 </html>
