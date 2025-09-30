@@ -5,41 +5,41 @@ window.onload = function () {
     const meats = document.getElementById("spikyhen");
 
     crumble.addEventListener("click", () => {
-      Toastify({
-        text: "Contains: fruit. Do not allow Tabby slimes to partake!",
-        duration: 3000,
-        gravity: "top",  
-        position: "right", //Positions the notifications at the top right, unintrusive but noticeable
-        style: {
-            background: "linear-gradient(to right, #d6845cff, #c86bb2ff)",
-        }
-      }).showToast();
+        Toastify({
+            text: "Contains: fruit. Do not allow Tabby slimes to partake!",
+            duration: 3000,
+            gravity: "top",  
+            position: "right", //Positions the notifications at the top right, unintrusive but noticeable
+            style: {
+                background: "linear-gradient(to right, #d6845cff, #c86bb2ff)",
+            }
+        }).showToast();
     })
 
     hearts.addEventListener("click", () => {
-      Toastify({
-        text: "Contains: vegetables. Carnivorous and fruit-loving slimes may find this too bitter!",
-        duration: 3500,
-        gravity: "top",  
-        position: "right",
-        style: {
-            background: "linear-gradient(to right, #526fbdff, #5ab29cff)",
-        }
-      }).showToast();
+        Toastify({
+            text: "Contains: vegetables. Carnivorous and fruit-loving slimes may find this too bitter!",
+            duration: 3500,
+            gravity: "top",  
+            position: "right",
+            style: {
+                background: "linear-gradient(to right, #526fbdff, #5ab29cff)",
+            }
+        }).showToast();
     })
 
     meats.addEventListener("click", () => {
-      Toastify({
-        text: "Contains: meat. Careful with your vegetarian slimes! This happens to be perfect for your carnivores though",
-        duration: 4000,
-        gravity: "top",  
-        position: "right",
-        style: {
-            background: "linear-gradient(to right, #350000ff, #000000ff)",
-        }
-      }).showToast();
+        Toastify({
+            text: "Contains: meat. Careful with your vegetarian slimes! This happens to be perfect for your carnivores though",
+            duration: 4000,
+            gravity: "top",  
+            position: "right",
+            style: {
+                background: "linear-gradient(to right, #350000ff, #000000ff)",
+            }
+        }).showToast();
     })
-  }
+}
 
 
 
