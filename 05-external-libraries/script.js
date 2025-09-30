@@ -4,7 +4,6 @@ window.onload = function () {
     const hearts = document.getElementById("heartbeet");
     const meats = document.getElementById("spikyhen");
 
-
     crumble.addEventListener("click", () => {
       Toastify({
         text: "Contains: fruit. Do not allow Tabby slimes to partake!",
@@ -15,7 +14,7 @@ window.onload = function () {
             background: "linear-gradient(to right, #d6845cff, #c86bb2ff)",
         }
       }).showToast();
-    });
+    })
 
     hearts.addEventListener("click", () => {
       Toastify({
@@ -27,7 +26,7 @@ window.onload = function () {
             background: "linear-gradient(to right, #526fbdff, #5ab29cff)",
         }
       }).showToast();
-    });
+    })
 
     meats.addEventListener("click", () => {
       Toastify({
@@ -39,11 +38,8 @@ window.onload = function () {
             background: "linear-gradient(to right, #350000ff, #000000ff)",
         }
       }).showToast();
-    });
-  };
-
-
-
+    })
+  }
 
 
 
