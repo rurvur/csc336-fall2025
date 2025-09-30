@@ -65,6 +65,7 @@ label{
 .foodPic {
     margin: 10px;
     height: 180px;
+    cursor: pointer;
 }
 
 .foodDesc {
