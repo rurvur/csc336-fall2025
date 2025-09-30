@@ -1,0 +1,72 @@
+@font-face {
+    font-family: slimyfont;
+    src: url(slimyfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow-y: scroll;
+    background-image: url("background.jpg");
+    background-size: 150%;
+    font-family: "slimyfont", sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: 5px;
+    color: rgb(255, 159, 130);
+    text-align: center;
+}
+
+h2 {
+    font-size: 45px;
+    margin-top: 5px;
+    color: rgb(181, 7, 7);
+    text-align: center;
+}
+
+p {
+    margin: 10px;
+    text-align: center;
+}
+
+label{
+    margin: 10px;
+    color: aqua;
+}
+
+.textbox {
+    background-color: rgba(80, 0, 70, 0.8);
+    width: 60%;
+    height: 130%;
+    position: relative;
+    left: 20%;
+    top: 20px;
+    bottom: 20px;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+#menucard {
+    background-color: rgb(230, 145, 185);
+    width: 90%;
+    height: 200px;
+    margin: 5%;
+    position: relative;
+    border: 2px solid #ff9a63;
+    border-radius: 12px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+    display: flex;
+}
+
+.foodPic {
+    margin: 10px;
+    height: 180px;
+}
+
+.foodDesc {
+    font-size: 20px;
+}
