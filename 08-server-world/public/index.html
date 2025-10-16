@@ -1,41 +1,17 @@
 <html>
     <head>
-        
+        <title>Give a Pharloom resident a gift</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="./script.js" defer></script>
     </head>
     <body>
-        <h1>Sample Text</h1>
+        <h1>Give a Delicate Flower to someone!</h1>
+        <div id = "worldDiv"></div>
         <form id = "dataForm">
-            <label for = "name">Name:</label>
+            <label for = "name">Who would you like to send a gift to? </label>
             <input id = "nameInput" name = "name" type = "text">
-            <label for = "faveFood">Favorite Food:</label>
-            <input id = "foodInput" name = "faveFood" type = "text">
-            <button type = "submit">SUBMIT</button>
+            <button type = "submit">Give them a flower</button>
+            <p>Note: only include their name, not their role</p>
         </form>
-        <script>
-            let dataFormEl = document.querySelector("#dataForm");
-            dataFormEl.addEventListener("submit", async e=> {
-                e.preventDefault();
-
-                let formData = new FormData(dataFormEl);
-                // let entries = formData.entries();
-                // let data = {}
-
-                // for (let entry of entries) {
-                //     data[entry[0]] = entry[1];
-                // }
-                // console.log(data);
-                let data = Object.fromEntries(formData.entries());
-                console.log(data);
-
-                let response = await fetch("/api/add", {
-                    method: "POST",
-                    headers: {"Content-Type": "application/json"},
-                    body: JSON.stringify(data)
-                });
-
-                let resText = await response.text();
-                console.log(resText);
-            })
-        </script>
     </body>
 </html>

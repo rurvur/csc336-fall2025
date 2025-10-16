@@ -1,10 +1,9 @@
 {
-  "regions":[
+  "regions": [
     {
       "name": "Pharloom",
       "climate": "arid",
       "towns": [
-        
         {
           "name": "Bone Bottom",
           "population": 107,
@@ -12,29 +11,42 @@
             {
               "name": "Flick",
               "role": "Fixer",
-              "items": ["hammer", "chisel", "Hornet Statue"]
+              "items": [
+                "hammer",
+                "chisel",
+                "Hornet Statue",
+                "Delicate Flower"
+              ]
             },
-
             {
               "name": "Pilby",
               "role": "Pilgrim",
-              "items": ["robe", "idol", "instrument"]
+              "items": [
+                "robe",
+                "idol",
+                "instrument"
+              ]
             },
-
             {
               "name": "Pebb",
               "role": "Shopkeeper",
-              "items": ["satchel", "magnet", "Mask Shard"]
+              "items": [
+                "satchel",
+                "magnet",
+                "Mask Shard"
+              ]
             },
-
             {
               "name": "Chapel Maiden",
               "role": "[REDACTED]",
-              "items": ["staff", "focus", "Arcane Egg"]
+              "items": [
+                "staff",
+                "focus",
+                "Arcane Egg"
+              ]
             }
           ]
         },
-
         {
           "name": "Bellhart",
           "population": 322,
@@ -42,29 +54,41 @@
             {
               "name": "Pavo",
               "role": "Greeter",
-              "items": ["cool hat", "effigy", "bell"]
+              "items": [
+                "cool hat",
+                "effigy",
+                "bell"
+              ]
             },
-
             {
               "name": "Plinney",
               "role": "Pinmaster",
-              "items": ["pin", "bell", "Pale Oil"]
+              "items": [
+                "pin",
+                "bell",
+                "Pale Oil"
+              ]
             },
-
             {
               "name": "Pebb",
               "role": "Shopkeeper",
-              "items": ["satchel", "bell", "Multibinder"]
+              "items": [
+                "satchel",
+                "bell",
+                "Multibinder"
+              ]
             },
-
             {
               "name": "Bell Hermit",
               "role": "[REDACTED]",
-              "items": ["staff", "focus", "Arcane Egg"]
+              "items": [
+                "staff",
+                "focus",
+                "Arcane Egg"
+              ]
             }
           ]
         },
-
         {
           "name": "Bilehaven",
           "population": 3,
@@ -72,30 +96,38 @@
             {
               "name": "Groal",
               "role": "Leader",
-              "items": ["wreath", "trinket", "Seeker's Soul"]
+              "items": [
+                "wreath",
+                "trinket",
+                "Seeker's Soul"
+              ]
             },
-
             {
               "name": "Huntress",
               "role": "Mother",
-              "items": ["egg", "tools", "meat"]
+              "items": [
+                "egg",
+                "tools",
+                "meat"
+              ]
             },
-
             {
               "name": "Runt",
               "role": "Child",
-              "items": ["hunger", "mask", "meat"]
+              "items": [
+                "hunger",
+                "mask",
+                "meat"
+              ]
             }
           ]
         }
       ]
     },
-    
     {
       "name": "Citadel",
       "climate": "temperate",
       "towns": [
-        
         {
           "name": "Songclave",
           "population": 2004,
@@ -103,29 +135,41 @@
             {
               "name": "Sherma",
               "role": "Musician",
-              "items": ["instrument", "idol", "heart of gold"]
+              "items": [
+                "instrument",
+                "idol",
+                "heart of gold"
+              ]
             },
-
             {
               "name": "Garmond",
               "role": "Guardian",
-              "items": ["nail", "mustache", "Zaza"]
+              "items": [
+                "nail",
+                "mustache",
+                "Zaza"
+              ]
             },
-
             {
               "name": "Jubilana",
               "role": "Shopkeeper",
-              "items": ["satchel", "backpack", "Spool Fragment"]
+              "items": [
+                "satchel",
+                "backpack",
+                "Spool Fragment"
+              ]
             },
-
             {
               "name": "Caretaker",
               "role": "[REDACTED]",
-              "items": ["staff", "robe", "Arcane Egg"]
+              "items": [
+                "staff",
+                "robe",
+                "Arcane Egg"
+              ]
             }
           ]
         },
-
         {
           "name": "Fleatopia",
           "population": 34,
@@ -133,29 +177,41 @@
             {
               "name": "Mooshka",
               "role": "Fleamaster",
-              "items": ["mustache", "fuzz", "Flea Idol"]
+              "items": [
+                "mustache",
+                "fuzz",
+                "Flea Idol"
+              ]
             },
-
             {
               "name": "Vog",
               "role": "Guardian",
-              "items": ["nail", "fuzz", "helmet"]
+              "items": [
+                "nail",
+                "fuzz",
+                "helmet"
+              ]
             },
-
             {
               "name": "Grishkin",
               "role": "Barkeep",
-              "items": ["ale", "fuzz", "Flea Brew"]
+              "items": [
+                "ale",
+                "fuzz",
+                "Flea Brew"
+              ]
             },
-
             {
               "name": "Kratt",
               "role": "Spa Manager",
-              "items": ["salts", "fuzz", "heart of darkness"]
+              "items": [
+                "salts",
+                "fuzz",
+                "heart of darkness"
+              ]
             }
           ]
         },
-
         {
           "name": "Cogwork Core",
           "population": 243,
@@ -163,32 +219,43 @@
             {
               "name": "Second Sentinel",
               "role": "Last Sentinel",
-              "items": ["pins", "robe", "Cogwork Heart"]
+              "items": [
+                "pins",
+                "robe",
+                "Cogwork Heart"
+              ]
             },
-
             {
               "name": "Fourth Chorus",
               "role": "Large Construct",
-              "items": ["claws", "core", "rock"]
+              "items": [
+                "claws",
+                "core",
+                "rock"
+              ]
             },
-
             {
               "name": "Last Architect",
               "role": "Architect",
-              "items": ["workshop", "chorus", "tools"]
+              "items": [
+                "workshop",
+                "chorus",
+                "tools"
+              ]
             },
-
             {
               "name": "Cogwork Dancers",
               "role": "Dancers",
-              "items": ["music box", "hearts?", "I dunno, I'm outta ideas"]
+              "items": [
+                "music box",
+                "hearts?",
+                "I dunno, I'm outta ideas"
+              ]
             }
           ]
         }
-    
       ]
     },
-    
     {
       "name": "Summit",
       "climate": "still",
@@ -200,29 +267,39 @@
             {
               "name": "Phantom",
               "role": "Organist",
-              "items": ["organ", "pin", "silk"]
+              "items": [
+                "organ",
+                "pin",
+                "silk"
+              ]
             }
           ]
         },
-
         {
           "name": "Cradle",
           "population": 2,
           "notable_people": [
             {
-              "name": "Lace",
+              "name": "Lace, Receiver of Flowers",
               "role": "Guardian",
-              "items": ["pin", "idol", "silk"]
+              "items": [
+                "pin",
+                "idol",
+                "silk",
+                "Delicate Flower"
+              ]
             },
-
             {
               "name": "Grand Mother Silk",
               "role": "Pale Being",
-              "items": ["silk", "silk", "silk"]
+              "items": [
+                "silk",
+                "silk",
+                "silk"
+              ]
             }
           ]
         },
-
         {
           "name": "Mount Fay",
           "population": 2,
@@ -230,13 +307,21 @@
             {
               "name": "Pinstress",
               "role": "Pinstress",
-              "items": ["pin", "cloak", "quill"]
+              "items": [
+                "pin",
+                "cloak",
+                "quill"
+              ]
             },
-
             {
               "name": "The Big Moth",
               "role": "Vibing",
-              "items": ["soft feathers", "lovable appearance", "sweet voice"]
+              "items": [
+                "soft feathers",
+                "lovable appearance",
+                "sweet voice",
+                "Delicate Flower"
+              ]
             }
           ]
         }
