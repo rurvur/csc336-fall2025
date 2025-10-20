@@ -14,8 +14,7 @@
               "items": [
                 "hammer",
                 "chisel",
-                "Hornet Statue",
-                "Delicate Flower"
+                "Hornet Statue"
               ]
             },
             {
@@ -280,13 +279,12 @@
           "population": 2,
           "notable_people": [
             {
-              "name": "Lace, Receiver of Flowers",
+              "name": "Lace",
               "role": "Guardian",
               "items": [
                 "pin",
                 "idol",
-                "silk",
-                "Delicate Flower"
+                "silk"
               ]
             },
             {
@@ -319,8 +317,7 @@
               "items": [
                 "soft feathers",
                 "lovable appearance",
-                "sweet voice",
-                "Delicate Flower"
+                "sweet voice"
               ]
             }
           ]

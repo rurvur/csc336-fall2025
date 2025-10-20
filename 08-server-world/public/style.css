@@ -1,0 +1,19 @@
+@font-face {
+    font-family: silkfont;
+    src: url(silkfont.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "silkfont", sans-serif;
+    background-color: lightskyblue;
+}
+
+#worldDiv{
+    background-color: aqua;
+    width: 50%;
+    margin: 10px;
+    border: 2px solid #ff9a63;
+    border-radius: 12px;
+}

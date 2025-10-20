@@ -26,8 +26,11 @@ app.post("/flowergift", async (req, res) => {
         for (let town of region.towns) {
             for (let person of town.notable_people) {
                 if (person.name === giftRecipient.name) {
-                    person.items.push("Delicate Flower");
-                    person.role += ", Receiver of Flowers";
+                    //Included this so characters cannot receive multiple flowers. Optional. Works since without a flower, all characters have 3 items
+                    if (person.items.length == 3) {
+                        person.items.push("Delicate Flower");
+                        person.role += ", Receiver of Flowers";
+                    }
                 }
             }
         }
