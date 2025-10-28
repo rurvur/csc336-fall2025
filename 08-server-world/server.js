@@ -1,11 +1,13 @@
 import express from "express";
 import fs from "fs";
+import cors from "cors";
 
 //Created instance of the express server
 const app = express();
 
 app.use(express.static("./public"));
 app.use(express.json());
+app.use(cors());
 
 app.get("/world", async (req, res) => {
     //This function should read the world.json file and return the parsed JSON object
