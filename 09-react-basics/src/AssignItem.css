@@ -1,0 +1,11 @@
+li {
+    background-color:rgb(168, 219, 249);
+    color: rgb(3, 0, 103);
+    margin-top: 1em;
+    margin-left: 30px;
+}
+
+#priobutt {
+    color: black;
+    background-color: antiquewhite;
+}
