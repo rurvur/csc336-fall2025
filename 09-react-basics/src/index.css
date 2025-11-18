@@ -46,6 +46,7 @@ button {
   background-color: #ec9c9c;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 10px;
 }
 button:hover {
   border-color: #646cff;
@@ -70,4 +71,10 @@ button:focus-visible {
 
 #docBody{
   margin-left: 30px;
+}
+
+h1 {
+  font-size: 55px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: rgb(204, 102, 255);
 }

@@ -5,10 +5,10 @@ function AssignItem({assign}) {
     <li 
         style={
             {
-                textDecoration: assign.submitted ? "line-through" : "none"
+                textDecoration: assign.submitted ? "line-through" : "none",
             }
         }>
-        {assign.name}
+        {assign.name}, Priority: {assign.priority}
     </li>
   )
 }
