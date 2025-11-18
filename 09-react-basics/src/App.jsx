@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import AssignJSON from "./data.json"
 import AssignItem from "./AssignItem.jsx"
-import PrioButton from "./PriorityButton.jsx"
 
 function App() {
   const [task, setTask] = useState("");
