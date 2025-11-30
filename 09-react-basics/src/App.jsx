@@ -1,45 +1,31 @@
-import { useState } from 'react'
-import AssignJSON from "./data.json"
-import AssignItem from "./AssignItem.jsx"
-import changePrio from "./PrioButton.jsx"
+import {BrowserRouter, Routes, Route, NavLink} from "react-router-dom";
+import RandomDogs from './RandomDogs.jsx';
+import Home from './Home.jsx';
+import About from './About.jsx';
 
 function App() {
-  const [task, setTask] = useState("");
-  
-  const [assigns, setAssign] = useState(AssignJSON);
-  
-   function addAssign() {
-    let newAssign = {
-      name: task,
-      submitted: false, 
-      priority: "low",
-      id: Date.now()
-    }
-
-    setAssign([...assigns, newAssign]);
-    setTask("");
-
-  }
-
   return (
-    <div id = "docBody">
-      <h1>Behold the most basic task manager you have ever seen!</h1>
-      
-      <input 
-        type="text"
-        value={task}
-        onChange={(e) => setTask(e.target.value)} 
-      />
-      <button onClick={addAssign}>Add Assignment</button>
-      <button onClick={changePrio}>Change Priority</button>
+    <>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/* Navigation bar with NavLink components.
+            NavLink is like Link but automatically adds an 'active' class
+            to the currently selected route, which we can style in CSS. */}
+        <nav>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/dogs">Dogs</NavLink>
+        </nav>
 
-      <ul>
-        {assigns.map((assign) => (
-          <AssignItem assign={assign} key={assign.id}/>
-        ))}
-      </ul>
-
-    </div>
+        {/* Route definitions map URL paths to React components.
+            When the URL matches a path, React Router renders the corresponding
+            element. Only one route is rendered at a time. */}
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/dogs" element={<RandomDogs/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
