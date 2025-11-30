@@ -6,14 +6,14 @@ import About from './About.jsx';
 function App() {
   return (
     <>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         {/* Navigation bar with NavLink components.
             NavLink is like Link but automatically adds an 'active' class
             to the currently selected route, which we can style in CSS. */}
         <nav>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/dogs">Dogs</NavLink>
+          <NavLink to="/">Home   </NavLink>
+          <NavLink to="/about">About   </NavLink>
+          <NavLink to="/dogs">Dogs   </NavLink>
         </nav>
 
         {/* Route definitions map URL paths to React components.
