@@ -77,4 +77,20 @@ h1 {
   font-size: 55px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: rgb(204, 102, 255);
+  margin: 20px;
+}
+
+p {
+  color: black;
+  margin: 5px;
+}
+
+nav {
+  margin: 20px;
+  padding: 10px;
+  gap: 5px;
+}
+
+nav a:hover {
+  background-color: #daebfe;
 }
