@@ -20,7 +20,11 @@ app.post("/teammate", async (req, res) => {
     const pokeData = await fs.readFileSync("./data.json", "utf-8");
     const pokemon = JSON.parse(pokeData);
 
-    const target = req.slot;
+    const target = req.body.slot;
+    console.log(req.body);
+
+    //Finds the specified pokemon from the request body (I think?)
+    const selectedPoke = pokemon.pokemon.team.find((poke) => poke.slot === target);
 
 
     //WORK ON THIS LATER TO ADD NEW POKEMON!
