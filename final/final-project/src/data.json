@@ -1,0 +1,116 @@
+{
+    "name": "Final Project dataset",
+    "pokemon": {
+        "count": 3,
+        "team": [
+            {
+                "slot": 1,
+                "name": "Dragonite",
+                "type": "Dragon",
+                "type2": "Flying",
+                "moves": ["Draco Meteor", "Hurricane", "Thunder", "Extreme Speed"],
+                "item": "Dragoninite",
+                "alpha": false,
+                "nature": "Calm",
+                "EVs": {
+                    "HP": 252,
+                    "Attack": 0,
+                    "Defense": 0,
+                    "Special Attack": 252,
+                    "Special Defense": 4,
+                    "Speed": 0
+                }
+            },
+            {
+                "slot": 2,
+                "name": "Glaceon",
+                "type": "Ice",
+                "type2": null,
+                "moves": ["Calm Mind", "Ice Beam", "Shadow Ball", "Protect"],
+                "item": "Nevermelt Ice",
+                "alpha": true,
+                "nature": "Modest",
+                "EVs": {
+                    "HP": 252,
+                    "Attack": 0,
+                    "Defense": 0,
+                    "Special Attack": 252,
+                    "Special Defense": 4,
+                    "Speed": 0
+                }
+            },
+            {
+                "slot": 3,
+                "name": "Excadrill",
+                "type": "Ground",
+                "type2": "Steel",
+                "moves": ["Swords Dance", "Earthquake", "Iron Head", "Megahorn"],
+                "item": "Excadrite",
+                "alpha": false,
+                "nature": "Adamant",
+                "EVs": {
+                    "HP": 252,
+                    "Attack": 252,
+                    "Defense": 4,
+                    "Special Attack": 0,
+                    "Special Defense": 0,
+                    "Speed": 0
+                }
+            },
+            {
+                "slot": 4,
+                "name": "",
+                "type": "",
+                "type2": null,
+                "moves": [],
+                "item": "",
+                "alpha": false,
+                "nature": "",
+                "EVs": {
+                    "HP": 0,
+                    "Attack": 0,
+                    "Defense": 0,
+                    "Special Attack": 0,
+                    "Special Defense": 0,
+                    "Speed": 0
+                }
+            },
+            {
+                "slot": 5,
+                "name": "",
+                "type": "",
+                "type2": null,
+                "moves": [],
+                "item": "",
+                "alpha": false,
+                "nature": "",
+                "EVs": {
+                    "HP": 0,
+                    "Attack": 0,
+                    "Defense": 0,
+                    "Special Attack": 0,
+                    "Special Defense": 0,
+                    "Speed": 0
+                }
+            },
+            {
+                "slot": 6,
+                "name": "",
+                "type": "",
+                "type2": null,
+                "moves": [],
+                "item": "",
+                "alpha": false,
+                "nature": "",
+                "EVs": {
+                    "HP": 0,
+                    "Attack": 0,
+                    "Defense": 0,
+                    "Special Attack": 0,
+                    "Special Defense": 0,
+                    "Speed": 0
+                }
+            }
+        ]
+    }
+}
