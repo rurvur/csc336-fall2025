@@ -9,41 +9,42 @@ app.use(express.static("./public"));
 app.use(express.json());
 app.use(cors());
 
-app.get("/pokemon", async (req, res) => {
+app.get("/api/pokemon", async (req, res) => {
     const dataString = await fs.readFileSync("data.json", "utf-8");
     const dataObject = JSON.parse(dataString);
     res.json(dataObject);
 });
 
-app.post("/teammate", async (req, res) => {
+app.post("/api/teammate", async (req, res) => {
     //Same as the get function from before
     const pokeData = await fs.readFileSync("./data.json", "utf-8");
-    const pokemon = JSON.parse(pokeData);
+    const pokelist = JSON.parse(pokeData);
 
     const target = req.body.slot;
     console.log(req.body);
 
     //Finds the specified pokemon from the request body (I think?)
-    const selectedPoke = pokemon.pokemon.team.find((poke) => poke.slot === target);
+    const selectedPoke = pokelist.pokemon.team.find((poke) => poke.slot === target);
 
 
-    //WORK ON THIS LATER TO ADD NEW POKEMON!
-    
-    //Loops through the world to find the specified person and gives them a flower!
-    for (let region of world.regions) {
-        for (let town of region.towns) {
-            for (let person of town.notable_people) {
-                if (person.name === giftRecipient.name) {
-                    //Included this so characters cannot receive multiple flowers. Optional. Works since without a flower, all characters have 3 items
-                    if (person.items.length == 3) {
-                        person.items.push("Delicate Flower");
-                        person.role += ", Receiver of Flowers";
-                    }
-                }
-            }
-        }
+    //Parses the result, probably.
+    selectedPoke.name = req.body.name;
+    selectedPoke.type = req.body.type;
+    if (req.body.type2) {
+        selectedPoke.type2 = req.body.type2;
     }
+    selectedPoke.moves = [];
+    selectedPoke.item = req.body.item;
+    selectedPoke.nature = req.body.nature;
+    selectedPoke.EVs.HP = parseInt(req.body.hp);
+    selectedPoke.EVs.Attack = parseInt(req.body.attack);
+    selectedPoke.EVs.Defense = parseInt(req.body.defense);
+    selectedPoke.EVs.SpAttack = parseInt(req.body.spattack);
+    selectedPoke.EVs.SpDefense = parseInt(req.body.spdefense);
+    selectedPoke.EVs.Speed = parseInt(req.body.speed);
 
-    await fs.writeFileSync("world.json", JSON.stringify(world, null, 2));
-    res.json(world);
+    await fs.writeFileSync("data.json", JSON.stringify(pokelist, null, 2));
+    res.json(pokelist);
 });
+
+app.listen(3000);

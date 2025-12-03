@@ -1,11 +1,12 @@
 {
-  "name": "final-project",
+  "name": "client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "cp -r dist/* ../server/public",
     "lint": "eslint .",
     "preview": "vite preview"
   },

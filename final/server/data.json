@@ -10,7 +10,6 @@
                 "type2": "Flying",
                 "moves": ["Draco Meteor", "Hurricane", "Thunder", "Extreme Speed"],
                 "item": "Dragoninite",
-                "alpha": false,
                 "nature": "Calm",
                 "EVs": {
                     "HP": 252,
@@ -28,7 +27,6 @@
                 "type2": null,
                 "moves": ["Calm Mind", "Ice Beam", "Shadow Ball", "Protect"],
                 "item": "Nevermelt Ice",
-                "alpha": true,
                 "nature": "Modest",
                 "EVs": {
                     "HP": 252,
@@ -46,7 +44,6 @@
                 "type2": "Steel",
                 "moves": ["Swords Dance", "Earthquake", "Iron Head", "Megahorn"],
                 "item": "Excadrite",
-                "alpha": false,
                 "nature": "Adamant",
                 "EVs": {
                     "HP": 252,
@@ -64,7 +61,6 @@
                 "type2": null,
                 "moves": [],
                 "item": "",
-                "alpha": false,
                 "nature": "",
                 "EVs": {
                     "HP": 0,
@@ -82,7 +78,6 @@
                 "type2": null,
                 "moves": [],
                 "item": "",
-                "alpha": false,
                 "nature": "",
                 "EVs": {
                     "HP": 0,
@@ -100,7 +95,6 @@
                 "type2": null,
                 "moves": [],
                 "item": "",
-                "alpha": false,
                 "nature": "",
                 "EVs": {
                     "HP": 0,
