@@ -2,18 +2,20 @@ import { useState, useEffect } from "react";
 
 function Pokemon1() {
   const [fromServer, setFromServer] = useState({something: "Name"});
+  const [nickname, setNickname] = useState({nname: "Nickname"});
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/pokemon")
+    fetch("/api/pokemon")
       .then(res => res.json())
-      .then(data => setFromServer({something:data.pokemon.team[0].name}));
+      .then(data => setFromServer({something:data.pokemon.team[0].name}))
+      .then(data => setNickname({nname:data.pokemon}));
   }, []);
 
   return (
     <>
       <div id = "slot1body">
         <h1 id = "name">{fromServer.something}</h1>
-        <h2 id = "nickname">Nickname</h2>
+        <h2 id = "nickname">{nickname.nname}</h2>
         <hr></hr>
         <div id = "description">This is where the description would go... IF I HAD ONE</div>
         <div id = "types">This is where the types would go</div>

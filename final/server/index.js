@@ -29,6 +29,7 @@ app.post("/api/teammate", async (req, res) => {
 
     //Parses the result, probably.
     selectedPoke.name = req.body.name;
+    selectedPoke.nickname = req.body.nickname;
     selectedPoke.type = req.body.type;
     if (req.body.type2) {
         selectedPoke.type2 = req.body.type2;

@@ -6,6 +6,7 @@
             {
                 "slot": 1,
                 "name": "Dragonite",
+                "nickname": "Dalamadur",
                 "type": "Dragon",
                 "type2": "Flying",
                 "moves": ["Draco Meteor", "Hurricane", "Thunder", "Extreme Speed"],
