@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 
 function Pokemon1() {
   const [fromServer, setFromServer] = useState({something: "Name"});
@@ -11,11 +11,9 @@ function Pokemon1() {
   const [item, setItem] = useState({item: "Item"});
   const [stats, setStats] = useState({hp: 0, attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0});
 
-  const [pokeImg, setPokeImg] = useState({Img: "AAAAAAA"});
-
   useEffect(() => {
-    async function loadData() {
-      await fetch("/api/pokemon")
+    function loadData() {
+      fetch("/api/pokemon")
         .then(res => res.json())
         .then(data => {
           setFromServer({something: data.pokemon.team[0].name});
@@ -38,20 +36,27 @@ function Pokemon1() {
             spdefense: data.pokemon.team[0].EVs.SpDefense,
             speed: data.pokemon.team[0].EVs.Speed
           });
-      });
-    }
+      });      
+    };
 
-    async function PokeData() {
-      await fetch(`https://pokeapi.co/api/v2/pokemon/${fromServer.something.toLowerCase()}`)
+    loadData();
+
+  }, []);
+
+  const [pokeImg, setPokeImg] = useState({Img: "https://static.wikia.nocookie.net/international-pokedex/images/2/2a/Pikachu_%28Yellow%29.png/revision/latest/scale-to-width-down/230?cb=20180525190624"});
+
+  useEffect(() => {
+    function PokeData(){
+      fetch(`https://pokeapi.co/api/v2/pokemon/${fromServer.something.toLowerCase()}`)
         .then(res => res.json())
         .then(data => {
           setPokeImg({Img: data.sprites.front_default});
-      });
+        });
     }
-    loadData();
+
     PokeData();
 
-  }, []);
+  }, [fromServer]);
 
   return (
     <>
@@ -59,12 +64,23 @@ function Pokemon1() {
         <h1 id = "name">{fromServer.something}</h1>
         <h2 id = "nickname">{nickname.nname}</h2>
         <hr></hr>
-        <div id = "description">This is where the description would go... IF I HAD ONE</div>
-        <div id = "types">Type 1: {type1.type1}, Type 2: {type2.type2}</div>
+        <div id = "types">Type: {type1.type1}/{type2.type2}</div>
         <div id = "item">Held Item: {item.item}</div>
         <div id = "nature">Nature: {pokenature.nature}</div>
-        <div id = "moves">Move 1: {moves.move1}</div>
-        <div id = "stats">Attack: {stats.attack}</div>
+        <div id = "moves">
+          Move 1: {moves.move1}<br></br>
+          Move 2: {moves.move2}<br></br>
+          Move 3: {moves.move3}<br></br>
+          Move 4: {moves.move4}
+        </div>
+        <div id = "stats">
+          HP: {stats.hp}<br></br>
+          Attack: {stats.attack}<br></br>
+          Defense: {stats.defense}<br></br>
+          Sp. Attack: {stats.spattack}<br></br>
+          Sp. Defense: {stats.spdefense}<br></br>
+          Speed: {stats.speed}
+        </div>
         <div id = "details"><img src={pokeImg.Img} alt={fromServer.something} /></div>
       </div>
     </>
