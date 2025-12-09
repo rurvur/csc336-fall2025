@@ -15,57 +15,56 @@ app.get("/api/pokemon", async (req, res) => {
     res.json(dataObject);
 });
 
-app.post("/api/teammate", async (req, res) => {
-    //Same as the get function from before
-    const pokeData = await fs.readFileSync("./data.json", "utf-8");
+// app.post("/api/formfill", async (req, res) => {
+//     //Same as the get function from before
+//     const pokeData = await fs.readFileSync("./data.json", "utf-8");
+//     const pokelist = JSON.parse(pokeData);
+
+//     const target = req.body.slot;
+
+//     //Finds the specified pokemon from the request body (I think?)
+//     const selectedPoke = pokelist.pokemon.team[target - 1];
+
+//     if (!selectedPoke) {
+//             return res.status(400).json({ error: "Invalid slot number" });
+//     }
+
+//     //Parses the result, probably.
+//     selectedPoke.name = req.body.name;
+//     selectedPoke.nickname = req.body.nickname;
+//     selectedPoke.type = req.body.type;
+//     if (req.body.type2) {
+//         selectedPoke.type2 = req.body.type2;
+//     }
+//     selectedPoke.moves = [];
+//     selectedPoke.item = req.body.item;
+//     selectedPoke.nature = req.body.nature;
+//     selectedPoke.EVs.HP = parseInt(req.body.hp);
+//     selectedPoke.EVs.Attack = parseInt(req.body.attack);
+//     selectedPoke.EVs.Defense = parseInt(req.body.defense);
+//     selectedPoke.EVs.SpAttack = parseInt(req.body.spattack);
+//     selectedPoke.EVs.SpDefense = parseInt(req.body.spdefense);
+//     selectedPoke.EVs.Speed = parseInt(req.body.speed);
+
+//     await fs.writeFileSync("data.json", JSON.stringify(pokelist, null, 2));
+//     res.json(pokelist);
+// });
+
+app.post("/api/formfill", async (req, res) => {
+    //Gets data
+    const pokeData = fs.readFileSync("./data.json", "utf-8");
     const pokelist = JSON.parse(pokeData);
-
-    const target = req.body.slot;
-    console.log(req.body);
-
-    //Finds the specified pokemon from the request body (I think?)
-    const selectedPoke = pokelist.pokemon.team.find((poke) => poke.slot === target);
-
-
-    //Parses the result, probably.
-    selectedPoke.name = req.body.name;
-    selectedPoke.nickname = req.body.nickname;
-    selectedPoke.type = req.body.type;
-    if (req.body.type2) {
-        selectedPoke.type2 = req.body.type2;
-    }
-    selectedPoke.moves = [];
-    selectedPoke.item = req.body.item;
-    selectedPoke.nature = req.body.nature;
-    selectedPoke.EVs.HP = parseInt(req.body.hp);
-    selectedPoke.EVs.Attack = parseInt(req.body.attack);
-    selectedPoke.EVs.Defense = parseInt(req.body.defense);
-    selectedPoke.EVs.SpAttack = parseInt(req.body.spattack);
-    selectedPoke.EVs.SpDefense = parseInt(req.body.spdefense);
-    selectedPoke.EVs.Speed = parseInt(req.body.speed);
-
-    await fs.writeFileSync("data.json", JSON.stringify(pokelist, null, 2));
-    res.json(pokelist);
-});
-
-app.post("/formfill", async (req, res) => {
-    console.log("Received:", req.body);
-    console.log("Did something");
-    
-    //Same as the get function from before
-    const pokeData = await fs.readFileSync("./data.json", "utf-8");
-    const pokemon = JSON.parse(pokeData);
     //res.json(pokemon);
 
     const target = req.body.slot;
-    console.log(req.body);
 
     //Finds the specified pokemon from the request body (I think?)
-    const selectedPoke = pokemon.pokemon.team.find((poke) => poke.slot === target);
+    const selectedPoke = pokelist.pokemon.team[target - 1];
 
     if (!selectedPoke) {
-            return res.status(400).json({ error: "Invalid slot number" });
-        }
+        return res.status(400).json({ error: "Invalid slot number" });
+    }
+    
     //Parses the result, probably.
     selectedPoke.name = req.body.name;
     selectedPoke.nickname = req.body.nickname;
@@ -81,15 +80,15 @@ app.post("/formfill", async (req, res) => {
         req.body.move3,
         req.body.move4
     ];
-    selectedPoke.EVs.HP = parseInt(req.body.hp);
-    selectedPoke.EVs.Attack = parseInt(req.body.attack);
-    selectedPoke.EVs.Defense = parseInt(req.body.defense);
-    selectedPoke.EVs.SpAttack = parseInt(req.body.spattack);
-    selectedPoke.EVs.SpDefense = parseInt(req.body.spdefense);
-    selectedPoke.EVs.Speed = parseInt(req.body.speed);
+    selectedPoke.EVs.HP = parseInt(req.body.hpEVs);
+    selectedPoke.EVs.Attack = parseInt(req.body.attackEVs);
+    selectedPoke.EVs.Defense = parseInt(req.body.defenseEVs);
+    selectedPoke.EVs.SpAttack = parseInt(req.body.specialAttackEVs);
+    selectedPoke.EVs.SpDefense = parseInt(req.body.specialDefenseEVs);
+    selectedPoke.EVs.Speed = parseInt(req.body.speedEVs);
 
-    await fs.writeFile("./data.json", JSON.stringify(pokemon, null, 2));
-    res.json({ success: true, pokemon });
+    fs.writeFileSync("./data.json", JSON.stringify(pokelist, null, 2));
+    res.json({ success: true });
 });
 
 app.listen(3000);

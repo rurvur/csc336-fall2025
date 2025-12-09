@@ -14,4 +14,4 @@ To be honest I'm so scattered with this finals week that I didn't have time to s
 
 # Extra Info
 
-Will update this if I think of anything. Thanks for the amazing semester!!
+I am well aware my index.css is very poorly formatted. I'll take the time here to say I know I could have made "body" classes for my text blocks and then just changed the color with an id instead of copy pasting it with new colors every time. At the same time I am so burnt out from finals that I just do not care as long as it works. I did some inline styling because line height was messing up my formatting but otherwise, this is all. Thank you for your patience, sorry that my CSS is a nightmare lol.

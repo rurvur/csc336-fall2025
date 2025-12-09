@@ -1,113 +1,146 @@
 {
-    "name": "Final Project dataset",
-    "pokemon": {
-        "count": 3,
-        "team": [
-            {
-                "slot": 1,
-                "name": "Dragonite",
-                "nickname": "Dalamadur",
-                "type": "Dragon",
-                "type2": "Flying",
-                "moves": ["Draco Meteor", "Hurricane", "Thunder", "Extreme Speed"],
-                "item": "Dragoninite",
-                "nature": "Calm",
-                "EVs": {
-                    "HP": 252,
-                    "Attack": 0,
-                    "Defense": 0,
-                    "SpAttack": 252,
-                    "SpDefense": 4,
-                    "Speed": 0
-                }
-            },
-            {
-                "slot": 2,
-                "name": "Glaceon",
-                "nickname": "Frosty",
-                "type": "Ice",
-                "type2": "",
-                "moves": ["Calm Mind", "Ice Beam", "Shadow Ball", "Protect"],
-                "item": "Nevermelt Ice",
-                "nature": "Modest",
-                "EVs": {
-                    "HP": 252,
-                    "Attack": 0,
-                    "Defense": 0,
-                    "SpAttack": 252,
-                    "SpDefense": 4,
-                    "Speed": 0
-                }
-            },
-            {
-                "slot": 3,
-                "name": "Excadrill",
-                "nickname": "I dunno sue me",
-                "type": "Ground",
-                "type2": "Steel",
-                "moves": ["Swords Dance", "Earthquake", "Iron Head", "Megahorn"],
-                "item": "Excadrite",
-                "nature": "Adamant",
-                "EVs": {
-                    "HP": 252,
-                    "Attack": 252,
-                    "Defense": 4,
-                    "SpAttack": 0,
-                    "SpDefense": 0,
-                    "Speed": 0
-                }
-            },
-            {
-                "slot": 4,
-                "name": "",
-                "type": "",
-                "type2": "",
-                "moves": [],
-                "item": "",
-                "nature": "",
-                "EVs": {
-                    "HP": 0,
-                    "Attack": 0,
-                    "Defense": 0,
-                    "SpAttack": 0,
-                    "SpDefense": 0,
-                    "Speed": 0
-                }
-            },
-            {
-                "slot": 5,
-                "name": "",
-                "type": "",
-                "type2": "",
-                "moves": [],
-                "item": "",
-                "nature": "",
-                "EVs": {
-                    "HP": 0,
-                    "Attack": 0,
-                    "Defense": 0,
-                    "SpAttack": 0,
-                    "SpDefense": 0,
-                    "Speed": 0
-                }
-            },
-            {
-                "slot": 6,
-                "name": "",
-                "type": "",
-                "type2": "",
-                "moves": [],
-                "item": "",
-                "nature": "",
-                "EVs": {
-                    "HP": 0,
-                    "Attack": 0,
-                    "Defense": 0,
-                    "SpAttack": 0,
-                    "SpDefense": 0,
-                    "Speed": 0
-                }
-            }
-        ]
-    }
+  "name": "Final Project dataset",
+  "pokemon": {
+    "count": 3,
+    "team": [
+      {
+        "slot": 1,
+        "name": "Dragonite",
+        "nickname": "Dalamadur",
+        "type": "Dragon",
+        "type2": "Flying",
+        "moves": [
+          "Draco Meteor",
+          "Hurricane",
+          "Thunder",
+          "Extreme Speed"
+        ],
+        "item": "Dragoninite",
+        "nature": "Calm",
+        "EVs": {
+          "HP": 252,
+          "Attack": 0,
+          "Defense": 0,
+          "SpAttack": 252,
+          "SpDefense": 4,
+          "Speed": 0
+        }
+      },
+      {
+        "slot": 2,
+        "name": "Glaceon",
+        "nickname": "Frosty",
+        "type": "Ice",
+        "type2": "",
+        "moves": [
+          "Calm Mind",
+          "Ice Beam",
+          "Shadow Ball",
+          "Protect"
+        ],
+        "item": "Nevermelt Ice",
+        "nature": "Modest",
+        "EVs": {
+          "HP": 252,
+          "Attack": 0,
+          "Defense": 0,
+          "SpAttack": 252,
+          "SpDefense": 4,
+          "Speed": 0
+        }
+      },
+      {
+        "slot": 3,
+        "name": "Excadrill",
+        "nickname": "I dunno sue me",
+        "type": "Ground",
+        "type2": "Steel",
+        "moves": [
+          "Swords Dance",
+          "Earthquake",
+          "Iron Head",
+          "Megahorn"
+        ],
+        "item": "Excadrite",
+        "nature": "Adamant",
+        "EVs": {
+          "HP": 252,
+          "Attack": 252,
+          "Defense": 4,
+          "SpAttack": 0,
+          "SpDefense": 0,
+          "Speed": 0
+        }
+      },
+      {
+        "slot": 4,
+        "name": "Samurott",
+        "type2": "",
+        "moves": [
+          "Waterfall",
+          "Swords Dance",
+          "X-Scissor",
+          "Aqua Jet"
+        ],
+        "item": "Mystic Water",
+        "nature": "Adamant",
+        "EVs": {
+          "HP": 4,
+          "Attack": 252,
+          "Defense": 0,
+          "SpAttack": null,
+          "SpDefense": null,
+          "Speed": 252
+        },
+        "nickname": "Nobunaga",
+        "type": "Water"
+      },
+      {
+        "slot": 5,
+        "name": "Hoppip",
+        "type": "Grass",
+        "type2": "Flying",
+        "moves": [
+          "Absorb",
+          "Bounce",
+          "Splash",
+          "Giga Impact"
+        ],
+        "item": "Miracle Seed",
+        "nature": "Jolly",
+        "EVs": {
+          "HP": 42,
+          "Attack": 42,
+          "Defense": 42,
+          "SpAttack": null,
+          "SpDefense": null,
+          "Speed": 42
+        },
+        "nickname": "PinkPikachu"
+      },
+      {
+        "slot": 6,
+        "name": "Hoppip",
+        "type": "Grass",
+        "type2": "Flying",
+        "moves": [
+          "Absorb",
+          "Bounce",
+          "Splash",
+          "Giga Impact"
+        ],
+        "item": "Miracle Seed",
+        "nature": "Jolly",
+        "EVs": {
+          "HP": 42,
+          "Attack": 42,
+          "Defense": 42,
+          "SpAttack": null,
+          "SpDefense": null,
+          "Speed": 42
+        },
+        "nickname": "PinkPikachu"
+      }
+    ]
+  }
 }

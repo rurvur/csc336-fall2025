@@ -1,6 +1,6 @@
 import { useState, useEffect, use } from "react";
 
-function Pokemon3() {
+function Pokemon4() {
   const [fromServer, setFromServer] = useState({something: "Name"});
   const [nickname, setNickname] = useState({nname: "Nickname"});
   const [pokenature, setNature] = useState({nature: "Nature"});
@@ -16,25 +16,25 @@ function Pokemon3() {
       fetch("/api/pokemon")
         .then(res => res.json())
         .then(data => {
-          setFromServer({something: data.pokemon.team[2].name});
-          setNickname({nname: data.pokemon.team[2].nickname});
-          setNature({nature: data.pokemon.team[2].nature});
+          setFromServer({something: data.pokemon.team[3].name});
+          setNickname({nname: data.pokemon.team[3].nickname});
+          setNature({nature: data.pokemon.team[3].nature});
           setMoves({
-            move1: data.pokemon.team[2].moves[0],
-            move2: data.pokemon.team[2].moves[1],
-            move3: data.pokemon.team[2].moves[2],
-            move4: data.pokemon.team[2].moves[3]
+            move1: data.pokemon.team[3].moves[0],
+            move2: data.pokemon.team[3].moves[1],
+            move3: data.pokemon.team[3].moves[2],
+            move4: data.pokemon.team[3].moves[3]
           });
-          setType1({type1: data.pokemon.team[2].type});
-          setType2({type2: data.pokemon.team[2].type2});
-          setItem({item: data.pokemon.team[2].item});
+          setType1({type1: data.pokemon.team[3].type});
+          setType2({type2: data.pokemon.team[3].type2});
+          setItem({item: data.pokemon.team[3].item});
           setStats({
-            hp: data.pokemon.team[2].EVs.HP,
-            attack: data.pokemon.team[2].EVs.Attack,
-            defense: data.pokemon.team[2].EVs.Defense,
-            spattack: data.pokemon.team[2].EVs.SpAttack,
-            spdefense: data.pokemon.team[2].EVs.SpDefense,
-            speed: data.pokemon.team[2].EVs.Speed
+            hp: data.pokemon.team[3].EVs.HP,
+            attack: data.pokemon.team[3].EVs.Attack,
+            defense: data.pokemon.team[3].EVs.Defense,
+            spattack: data.pokemon.team[3].EVs.SpAttack,
+            spdefense: data.pokemon.team[3].EVs.SpDefense,
+            speed: data.pokemon.team[3].EVs.Speed
           });
       });      
     };
@@ -85,12 +85,12 @@ function Pokemon3() {
 
   return (
     <>
-      <div id = "slot3body">
-        <div id = "namecard3">
-          <h1 id = "name" style = {{color: "maroon"}}>{fromServer.something}</h1>
+      <div id = "slot4body">
+        <div id = "namecard4">
+          <h1 id = "name" style = {{color: "white"}}>{fromServer.something}</h1>
           <div id = "pokeImg"><img src={pokeImg.Img} alt={fromServer.something} /></div>
           <br></br>
-          <h2 id = "nickname" style = {{color: "crimson"}}>{nickname.nname}</h2>
+          <h2 style = {{color: "grey"}}>{nickname.nname}</h2>
         </div>
         <br></br>
         <div id = "text">
@@ -142,4 +142,4 @@ function Pokemon3() {
   )
 }
 
-export default Pokemon3
+export default Pokemon4
