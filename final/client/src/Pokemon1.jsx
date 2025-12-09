@@ -4,6 +4,12 @@ function Pokemon1() {
   const [fromServer, setFromServer] = useState({something: "Name"});
   const [nickname, setNickname] = useState({nname: "Nickname"});
   const [pokenature, setNature] = useState({nature: "Nature"});
+  // This would have been much easier if I understood set methods better but I also don't want to touch it and break it, sorry!
+  const [moves, setMoves] = useState({move1: "Move1", move2: "Move2", move3: "Move3", move4: "Move4"});
+  const [type1, setType1] = useState({type1: "Type1"});
+  const [type2, setType2] = useState({type2: "Type2"});
+  const [item, setItem] = useState({item: "Item"});
+  const [stats, setStats] = useState({hp: 0, attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0});
 
   useEffect(() => {
     async function loadData() {
@@ -13,6 +19,23 @@ function Pokemon1() {
           setFromServer({something: data.pokemon.team[0].name});
           setNickname({nname: data.pokemon.team[0].nickname});
           setNature({nature: data.pokemon.team[0].nature});
+          setMoves({
+            move1: data.pokemon.team[0].moves[0].replace(/\s+/g, '-'),
+            move2: data.pokemon.team[0].moves[1].replace(/\s+/g, '-'),
+            move3: data.pokemon.team[0].moves[2].replace(/\s+/g, '-'),
+            move4: data.pokemon.team[0].moves[3].replace(/\s+/g, '-')
+          });
+          setType1({type1: data.pokemon.team[0].type});
+          setType2({type2: data.pokemon.team[0].type2});
+          setItem({item: data.pokemon.team[0].item});
+          setStats({
+            hp: data.pokemon.team[0].EVs.HP,
+            attack: data.pokemon.team[0].EVs.Attack,
+            defense: data.pokemon.team[0].EVs.Defense,
+            spattack: data.pokemon.team[0].EVs.SpAttack,
+            spdefense: data.pokemon.team[0].EVs.SpDefense,
+            speed: data.pokemon.team[0].EVs.Speed
+          });
       });
     }
     loadData();
@@ -25,10 +48,11 @@ function Pokemon1() {
         <h2 id = "nickname">{nickname.nname}</h2>
         <hr></hr>
         <div id = "description">This is where the description would go... IF I HAD ONE</div>
-        <div id = "types">This is where the types would go</div>
-        <div id = "nature">{pokenature.nature}</div>
-        <div id = "moves">Here is where the moves would go if you added them properly</div>
-        <div id = "stats">Here is where the stats would go</div>
+        <div id = "types">Type 1: {type1.type1}, Type 2: {type2.type2}</div>
+        <div id = "item">Held Item: {item.item}</div>
+        <div id = "nature">Nature: {pokenature.nature}</div>
+        <div id = "moves">Move 1: {moves.move1}</div>
+        <div id = "stats">Attack: {stats.attack}</div>
         <div id = "details">This is where the rest of the stuff goes</div>
       </div>
     </>
