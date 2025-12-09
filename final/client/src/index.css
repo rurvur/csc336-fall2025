@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #8dbcff;
+  background-color: #8dafff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,9 +17,15 @@ a {
   font-weight: 500;
   color: #ffffff;
   text-decoration: inherit;
+  cursor: pointer;
+  transition: color 0.25s;
+  padding: 6px;
+  background-color: rgb(142, 111, 251);
+  border: 1px white solid;
 }
 a:hover {
-  color: #636af9;
+  color: #b5b9fe;
+  background-color: rgb(54, 0, 54);
 }
 
 body {
@@ -44,6 +50,10 @@ h2 {
   left: 5px;
   position: relative;
   font-style: italic;
+}
+
+h3 {
+  font-size: 1.1em;
 }
 
 button {
@@ -78,8 +88,43 @@ button:focus-visible {
   }
 }
 
+#homepage {
+  background-color: maroon;
+}
+
+#homebody {
+  background-color: rgb(192, 192, 192);
+  color: rgb(0, 0, 0);
+  width: 60%;
+  height: 80%;
+  right: 20%;
+  top: 10%;
+  position: absolute;
+  border: 4px solid rgb(0, 0, 0);
+  border-radius: 8px;
+}
+
+#homenamecard {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  padding: 5px;
+  width: 95%;
+  left: 2.5%;
+  top: 2%;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#homenamecard h1 {
+  font-size: 2.5em;
+  color: white;
+}
+
 #slot1body {
   background-color: rgb(123, 123, 251);
+  color: rgb(129, 255, 255);
   width: 60%;
   height: 80%;
   right: 20%;
@@ -89,6 +134,54 @@ button:focus-visible {
   border-radius: 8px;
 }
 
-hr {
-  color: white;
+#namecard1 {
+  background-color: rgb(70, 144, 255);
+  display: flex;
+  width: 95%;
+  left: 2.5%;
+  top: 2%;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#slot2body {
+  background-color: rgb(192, 141, 254);
+  color: rgb(77, 42, 252);
+  width: 60%;
+  height: 80%;
+  right: 20%;
+  top: 10%;
+  position: absolute;
+  border: 4px solid rgb(146, 38, 255);
+  border-radius: 8px;
+}
+
+#namecard2 {
+  background-color: rgb(135, 70, 255);
+  display: flex;
+  width: 95%;
+  left: 2.5%;
+  top: 2%;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#stats {
+  margin-left: 20px;
+}
+
+#moves {
+  margin-left: 20px;
+}
+
+#text {
+  margin-left: 3px;
+}
+
+#pokeImg {
+  margin-left: 20px;
 }

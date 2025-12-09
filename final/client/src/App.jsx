@@ -13,11 +13,11 @@ function App() {
     <>
       <BrowserRouter>
         <nav>
-          <NavLink to="/">Home   </NavLink>
-          <NavLink to="/about">About   </NavLink>
-          <NavLink to="/pokemon1">Slot 1   </NavLink>
-          <NavLink to="/pokemon2">Slot 2   </NavLink>
-          <NavLink to="/pokemon3">Slot 3   </NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/pokemon1">Slot 1</NavLink>
+          <NavLink to="/pokemon2">Slot 2</NavLink>
+          <NavLink to="/pokemon3">Slot 3</NavLink>
         </nav>
 
         <Routes>

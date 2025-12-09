@@ -24,6 +24,7 @@
             {
                 "slot": 2,
                 "name": "Glaceon",
+                "nickname": "Frosty",
                 "type": "Ice",
                 "type2": "",
                 "moves": ["Calm Mind", "Ice Beam", "Shadow Ball", "Protect"],
@@ -41,6 +42,7 @@
             {
                 "slot": 3,
                 "name": "Excadrill",
+                "nickname": "I dunno sue me",
                 "type": "Ground",
                 "type2": "Steel",
                 "moves": ["Swords Dance", "Earthquake", "Iron Head", "Megahorn"],
