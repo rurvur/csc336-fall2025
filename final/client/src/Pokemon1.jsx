@@ -11,6 +11,8 @@ function Pokemon1() {
   const [item, setItem] = useState({item: "Item"});
   const [stats, setStats] = useState({hp: 0, attack: 0, defense: 0, spattack: 0, spdefense: 0, speed: 0});
 
+  const [pokeImg, setPokeImg] = useState({Img: "AAAAAAA"});
+
   useEffect(() => {
     async function loadData() {
       await fetch("/api/pokemon")
@@ -37,6 +39,11 @@ function Pokemon1() {
             speed: data.pokemon.team[0].EVs.Speed
           });
       });
+      await fetch(`https://pokeapi.co/api/v2/pokemon-species/${fromServer.something.toLowerCase()}`)
+        .then(res => res.json())
+        .then(data => {
+          setPokeImg({Img: data.sprites.front_default});
+        });
     }
     loadData();
   }, []);
@@ -53,7 +60,7 @@ function Pokemon1() {
         <div id = "nature">Nature: {pokenature.nature}</div>
         <div id = "moves">Move 1: {moves.move1}</div>
         <div id = "stats">Attack: {stats.attack}</div>
-        <div id = "details">This is where the rest of the stuff goes</div>
+        <div id = "details"><img src={pokeImg.Img} alt={fromServer.something} /></div>
       </div>
     </>
   )
