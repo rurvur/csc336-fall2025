@@ -16,7 +16,7 @@ app.get("/api/pokemon", async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-          res.send('Welcome to the homepage!');
+    res.send('Welcome to the homepage!');
 });
 
 app.post("/api/teammate", async (req, res) => {
