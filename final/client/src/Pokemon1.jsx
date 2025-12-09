@@ -39,13 +39,18 @@ function Pokemon1() {
             speed: data.pokemon.team[0].EVs.Speed
           });
       });
-      await fetch(`https://pokeapi.co/api/v2/pokemon-species/${fromServer.something.toLowerCase()}`)
+    }
+
+    async function PokeData() {
+      await fetch(`https://pokeapi.co/api/v2/pokemon/${fromServer.something.toLowerCase()}`)
         .then(res => res.json())
         .then(data => {
           setPokeImg({Img: data.sprites.front_default});
-        });
+      });
     }
     loadData();
+    PokeData();
+
   }, []);
 
   return (
