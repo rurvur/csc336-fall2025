@@ -5,7 +5,7 @@ import cors from "cors";
 //Created instance of the express server
 const app = express();
 
-app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(express.static("./public"));
 app.use(express.json());
 app.use(cors());
 
@@ -13,10 +13,6 @@ app.get("/api/pokemon", async (req, res) => {
     const dataString = await fs.readFileSync("data.json", "utf-8");
     const dataObject = JSON.parse(dataString);
     res.json(dataObject);
-});
-
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
 
 app.post("/api/teammate", async (req, res) => {
