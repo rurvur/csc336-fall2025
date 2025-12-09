@@ -5,7 +5,7 @@ import cors from "cors";
 //Created instance of the express server
 const app = express();
 
-app.use(express.static("./public"));
+app.use(express.static(path.join(__dirname, "../client/dist")));
 app.use(express.json());
 app.use(cors());
 
@@ -16,7 +16,7 @@ app.get("/api/pokemon", async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Welcome to the homepage!');
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
 });
 
 app.post("/api/teammate", async (req, res) => {
