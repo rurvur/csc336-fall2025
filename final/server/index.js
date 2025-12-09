@@ -15,6 +15,10 @@ app.get("/api/pokemon", async (req, res) => {
     res.json(dataObject);
 });
 
+app.get('/', (req, res) => {
+          res.send('Welcome to the homepage!');
+});
+
 app.post("/api/teammate", async (req, res) => {
     //Same as the get function from before
     const pokeData = await fs.readFileSync("./data.json", "utf-8");
